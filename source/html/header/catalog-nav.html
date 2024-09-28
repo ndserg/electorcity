@@ -1,0 +1,17 @@
+<nav class="header__catalog-nav catalog-nav catalog-nav--closed" aria-label="По каталогу">
+  <span class="catalog-nav__title" role="heading">Каталог</span>
+
+  <div class="container">
+    <ul class="catalog-nav__list list-reset">@@for (var i = 0; i < catalogItems.length; i++) {
+      <li class="catalog-nav__item">
+        <a class="catalog-nav__link catalog-nav__link--`+catalogItems[i].name+`" href="#">
+          `+catalogItems[i].text+`
+          <svg class="catalog-nav__icon" width="8" height="16" aria-hidden="true">
+            <use xlink:href="@img/icons/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </li>
+    }
+    </ul>
+  </div>
+</nav>

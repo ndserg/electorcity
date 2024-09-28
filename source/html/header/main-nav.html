@@ -1,0 +1,27 @@
+<nav class="header__nav main-nav" aria-label="Основная">
+  <ul class="main-nav__list list-reset">
+    <li class="main-nav__item">
+      <a class="main-nav__link main-nav__link--accent" href="#">
+        <svg class="main-nav__icon-sales" width="18" height="18" aria-hidden="true">
+          <use xlink:href="@img/icons/sprite.svg#icon-percent"></use>
+        </svg>
+        Акции
+      </a>
+    </li>@@for (var i = 0; i < navigations.length; i++) {
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="#">`+navigations[i].title+`</a>
+    </li>
+    }
+  </ul>
+
+  <button class="main-nav__btn main-nav__btn--prev" type="button" aria-label="Листать меню влево">
+    <svg class="main-nav__btn-icon" width="5" height="6" aria-hidden="true">
+      <use xlink:href="@img/icons/sprite.svg#icon-arrow"></use>
+    </svg>
+  </button>
+  <button class="main-nav__btn main-nav__btn--next" type="button" aria-label="Листать меню вправо">
+    <svg class="main-nav__btn-icon" width="5" height="6" aria-hidden="true">
+      <use xlink:href="@img/icons/sprite.svg#icon-arrow"></use>
+    </svg>
+  </button>
+</nav>

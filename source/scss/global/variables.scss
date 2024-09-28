@@ -1,0 +1,24 @@
+:root {
+  --font-family: "Roboto", sans-serif;
+}
+
+/* colors */
+$white: #ffffff;
+$black: #333333;
+$grey: #8d8d8d;
+$grey-light: #e8e8e8;
+$red: #e11c4b;
+
+/* viewports */
+$mobile: 320px;
+$mobile-xl: 576px;
+$tablet: 768px;
+$tablet-large: 1024px;
+$desktop: 1200px;
+$gap: 32px;
+
+/* paddings */
+$padding-mobile: 10px;
+$padding-tablet: 20px;
+$padding-desktop: 25px;
+

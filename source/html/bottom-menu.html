@@ -1,0 +1,12 @@
+<ul class="bottom-menu bottom-menu--closed list-reset">@@for (var i = 0; i < userItems.length; i++) {
+  <li class="bottom-menu__item bottom-menu__item--`+userItems[i].icon+`">
+    <a class="bottom-menu__link" href="#">
+      <svg class="bottom-menu__icon bottom-menu__icon--`+userItems[i].icon+`" width="`+userItems[i].width+`" height="`+userItems[i].height+`" aria-hidden="true">
+        <use xlink:href="@img/icons/sprite.svg#icon-`+userItems[i].icon+`"></use>
+      </svg>
+
+      <span class="bottom-menu__text">`+userItems[i].text+`</span>
+    </a>
+  </li>
+}
+</ul>

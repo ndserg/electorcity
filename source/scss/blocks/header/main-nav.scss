@@ -1,0 +1,169 @@
+.main-nav {
+  position: relative;
+
+  margin-right: calc($padding-mobile * -1);
+  margin-left: calc($padding-mobile * -1);
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    margin-right: calc($padding-tablet * -1);
+    margin-left: calc($padding-tablet * -1);
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: calc($padding-desktop * -1);
+    margin-left: calc($padding-desktop * -1);
+  }
+}
+
+.main-nav__list {
+  display: flex;
+
+  column-gap: 19px;
+
+  align-items: center;
+
+  padding-right: $padding-mobile;
+  padding-left: $padding-mobile;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+  @media (min-width: $tablet) {
+    column-gap: 37px;
+
+    padding-right: $padding-tablet;
+    padding-left: $padding-tablet;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: $padding-desktop;
+    padding-left: $padding-desktop;
+  }
+}
+
+.main-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.main-nav__item {
+  flex-shrink: 0;
+}
+
+.main-nav__icon-sales {
+  fill: currentColor;
+}
+
+.main-nav__link {
+  display: block;
+
+  color: inherit;
+  text-decoration: none;
+
+  outline-color: transparent;
+  outline-offset: 4px;
+
+  transition: color 0.3s, outline 0.3s, opacity 0.3s;
+
+  .main-nav__icon-sales {
+    color: $grey;
+  }
+
+  &--accent {
+    display: flex;
+
+    column-gap: 6px;
+
+    align-items: center;
+
+    color: $red;
+
+    .main-nav__icon-sales {
+      color: red;
+    }
+  }
+
+  &:focus-visible {
+    outline-color: $red;
+  }
+
+  &:hover {
+    color: $red;
+
+    outline-color: transparent;
+
+    .main-nav__icon-sales {
+      color: $red;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-nav__controls {
+  position: absolute;
+  top: 0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.main-nav__btn-icon {
+  fill: currentColor;
+}
+
+.main-nav__btn {
+  position: absolute;
+  top: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+
+  color: $grey;
+
+  cursor: pointer;
+
+  background-color: $white;
+  border: 1px solid $grey;
+  border-radius: 50%;
+
+  transition: transform 0.3s, border-color 0.3s, opacity 0.3s, color 0.3s;
+
+  &:hover {
+    color: $red;
+
+    border-color: $red;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &--prev {
+    left: $padding-desktop;
+
+    .main-nav__btn-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--next {
+    right: $padding-desktop;
+  }
+
+  &--hidden {
+    transform: scale(0);
+  }
+}

@@ -1,0 +1,343 @@
+.catalog-nav {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  z-index: 20;
+
+  width: 100%;
+  height: 100%;
+  padding-bottom: 48px;
+  overflow-y: scroll;
+
+  background-color: $white;
+
+  transition: transform 0.4s;
+  transition-delay: 0.4s;
+
+  &--closed {
+    transform: translateX(0);
+  }
+
+  &--opened {
+    transform: translateX(100vw);
+  }
+}
+
+.catalog-nav__title {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  min-height: 88px;
+  padding-right: $padding-mobile;
+  padding-bottom: 12px;
+  padding-left: $padding-mobile;
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: $black;
+
+  background-color: $white;
+}
+
+.catalog-nav__list {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 4px;
+}
+
+.catalog-nav__item {
+  &::after {
+    position: absolute;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    content: "";
+
+    background-color: $grey-light;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.catalog-nav__icon {
+  margin-left: auto;
+
+  fill: $grey;
+
+  transition: transform 0.3s;
+}
+
+.catalog-nav__link {
+  display: flex;
+
+  column-gap: 8px;
+
+  align-items: center;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: $black;
+  text-decoration: none;
+
+  outline-color: transparent;
+  outline-offset: -1px;
+
+  transition: outline 0.3s, color 0.3s;
+
+  &:focus-visible {
+    outline-color: $red;
+  }
+
+  &:active {
+    color: $red;
+
+    outline-color: transparent;
+
+    .catalog-nav__icon {
+      fill: $red;
+
+      transform: translateX(-20px);
+    }
+  }
+
+  &::before {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    content: "";
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+}
+
+.no-webp {
+  .catalog-nav__link {
+    &--notebooks::before {
+      background-image: url("@img/mobile-catalog/notebooks.png");
+    }
+
+    &--smartphones::before {
+      background-image: url("@img/mobile-catalog/smartphones.png");
+    }
+
+    &--tvsets::before {
+      background-image: url("@img/mobile-catalog/tvs.png");
+    }
+
+    &--photos::before {
+      background-image: url("@img/mobile-catalog/photos.png");
+    }
+
+    &--tablets::before {
+      background-image: url("@img/mobile-catalog/tablets.png");
+    }
+
+    &--headsets::before {
+      background-image: url("@img/mobile-catalog/headsets.png");
+    }
+
+    &--gaming::before {
+      background-image: url("@img/mobile-catalog/games.png");
+    }
+
+    &--smartwatches::before {
+      background-image: url("@img/mobile-catalog/smart-devs.png");
+    }
+
+    &--acoustic::before {
+      background-image: url("@img/mobile-catalog/portable-sound.png");
+    }
+
+    &--networks::before {
+      background-image: url("@img/mobile-catalog/networks.png");
+    }
+
+    &--office::before {
+      background-image: url("@img/mobile-catalog/office.png");
+    }
+
+    &--smarthome::before {
+      background-image: url("@img/mobile-catalog/smart-home.png");
+    }
+  }
+}
+
+.webp {
+  .catalog-nav__link {
+    &--notebooks::before {
+      background-image: url("@img/mobile-catalog/notebooks.webp");
+    }
+
+    &--smartphones::before {
+      background-image: url("@img/mobile-catalog/smartphones.webp");
+    }
+
+    &--tvsets::before {
+      background-image: url("@img/mobile-catalog/tvs.webp");
+    }
+
+    &--photos::before {
+      background-image: url("@img/mobile-catalog/photos.webp");
+    }
+
+    &--tablets::before {
+      background-image: url("@img/mobile-catalog/tablets.webp");
+    }
+
+    &--headsets::before {
+      background-image: url("@img/mobile-catalog/headsets.webp");
+    }
+
+    &--gaming::before {
+      background-image: url("@img/mobile-catalog/games.webp");
+    }
+
+    &--smartwatches::before {
+      background-image: url("@img/mobile-catalog/smart-devs.webp");
+    }
+
+    &--acoustic::before {
+      background-image: url("@img/mobile-catalog/portable-sound.webp");
+    }
+
+    &--networks::before {
+      background-image: url("@img/mobile-catalog/networks.webp");
+    }
+
+    &--office::before {
+      background-image: url("@img/mobile-catalog/office.webp");
+    }
+
+    &--smarthome::before {
+      background-image: url("@img/mobile-catalog/smart-home.webp");
+    }
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .no-webp {
+    .catalog-nav__link {
+      &--notebooks::before {
+        background-image: url("@img/mobile-catalog/notebooks@2x.png");
+      }
+
+      &--smartphones::before {
+        background-image: url("@img/mobile-catalog/smartphones@2x.png");
+      }
+
+      &--tvsets::before {
+        background-image: url("@img/mobile-catalog/tvs@2x.png");
+      }
+
+      &--photos::before {
+        background-image: url("@img/mobile-catalog/photos@2x.png");
+      }
+
+      &--tablets::before {
+        background-image: url("@img/mobile-catalog/tablets@2x.png");
+      }
+
+      &--headsets::before {
+        background-image: url("@img/mobile-catalog/headsets@2x.png");
+      }
+
+      &--gaming::before {
+        background-image: url("@img/mobile-catalog/games@2x.png");
+      }
+
+      &--smartwatches::before {
+        background-image: url("@img/mobile-catalog/smart-devs@2x.png");
+      }
+
+      &--acoustic::before {
+        background-image: url("@img/mobile-catalog/portable-sound@2x.png");
+      }
+
+      &--networks::before {
+        background-image: url("@img/mobile-catalog/networks@2x.png");
+      }
+
+      &--office::before {
+        background-image: url("@img/mobile-catalog/office@2x.png");
+      }
+
+      &--smarthome::before {
+        background-image: url("@img/mobile-catalog/smart-home@2x.png");
+      }
+    }
+  }
+
+  .webp {
+    .catalog-nav__link {
+      &--notebooks::before {
+        background-image: url("@img/mobile-catalog/notebooks@2x.webp");
+      }
+
+      &--smartphones::before {
+        background-image: url("@img/mobile-catalog/smartphones@2x.webp");
+      }
+
+      &--tvsets::before {
+        background-image: url("@img/mobile-catalog/tvs@2x.webp");
+      }
+
+      &--photos::before {
+        background-image: url("@img/mobile-catalog/photos@2x.webp");
+      }
+
+      &--tablets::before {
+        background-image: url("@img/mobile-catalog/tablets@2x.webp");
+      }
+
+      &--headsets::before {
+        background-image: url("@img/mobile-catalog/headsets@2x.webp");
+      }
+
+      &--gaming::before {
+        background-image: url("@img/mobile-catalog/games@2x.webp");
+      }
+
+      &--smartwatches::before {
+        background-image: url("@img/mobile-catalog/smart-devs@2x.webp");
+      }
+
+      &--acoustic::before {
+        background-image: url("@img/mobile-catalog/portable-sound@2x.webp");
+      }
+
+      &--networks::before {
+        background-image: url("@img/mobile-catalog/networks@2x.webp");
+      }
+
+      &--office::before {
+        background-image: url("@img/mobile-catalog/office@2x.webp");
+      }
+
+      &--smarthome::before {
+        background-image: url("@img/mobile-catalog/smart-home@2x.webp");
+      }
+    }
+  }
+}

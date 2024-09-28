@@ -1,0 +1,81 @@
+.header-address {
+  display: flex;
+
+  column-gap: 36px;
+}
+
+.header-address__link {
+  display: flex;
+
+  column-gap: 6px;
+
+  align-items: center;
+
+  font-style: normal;
+  color: inherit;
+  text-decoration: none;
+
+  outline-color: transparent;
+  outline-offset: 4px;
+
+  transition: color 0.3s, outline 0.3s, opacity 0.3s;
+
+  svg {
+    color: $grey;
+  }
+
+  &:last-child {
+    margin-left: auto;
+  }
+
+  &:focus-visible {
+    outline-color: $red;
+  }
+
+  &:hover {
+    color: $red;
+
+    outline-color: transparent;
+
+    svg {
+      color: $red;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header-address__text {
+  overflow-wrap: anywhere;
+}
+
+.header-address__icon {
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+
+  transition: color 0.3s;
+
+  &--map {
+    width: 18px;
+    height: 19px;
+
+    fill: transparent;
+    stroke: currentColor;
+    stroke-width: 1.5;
+  }
+
+  &--shop {
+    width: 18px;
+    height: 19px;
+  }
+
+  &--phone {
+    fill: transparent;
+    stroke: currentColor;
+    stroke-width: 1.5;
+  }
+}

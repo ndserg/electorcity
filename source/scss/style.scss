@@ -1,0 +1,17 @@
+// Global
+@import "fonts";
+@import "global/variables";
+@import "global/global";
+
+// Blocks
+@import "blocks/header/header";
+@import "blocks/header/header-address";
+@import "blocks/header/search";
+@import "blocks/header/user-menu";
+@import "blocks/header/main-nav";
+@import "blocks/header/catalog-nav";
+@import "blocks/main/main";
+@import "blocks/main/sales";
+@import "blocks/footer";
+@import "blocks/gaming-action/gaming-action";
+@import "blocks/bottom-menu";

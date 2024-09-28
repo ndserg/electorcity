@@ -1,0 +1,70 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      @@include('address.html', {})
+    </div>
+  </div>
+
+  <div class="header__middle container">
+    <div class="header__logo">
+      <a href="index.html" class="header__logo-link">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="@img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="@img/logo-tablet.svg">
+          <img class="header__logo-img" src="@img/logo-mobile.svg" width="149" height="21" alt="Логотип интернет-магазина бытовой техники Электросити">
+        </picture>
+      </a>
+    </div>
+
+    <div class="header__catalog">
+      <button class="header__burger-btn" type="button" aria-expanded="false" aria-label="Открыть или закрыть мобильное меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      @@include('catalog-nav.html', {
+        catalogItems: [
+        {text: "Ноутбуки и аксессуары", name: "notebooks"},
+        {text: "Смартфоны и аксессуары", name: "smartphones"},
+        {text: "Телевизоры и аксессуары", name: "tvsets"},
+        {text: "Фото и видеотехника", name: "photos"},
+        {text: "Планшеты и аксессуары", name: "tablets"},
+        {text: "Наушники и аудиотехника", name: "headsets"},
+        {text: "Гейминг", name: "gaming"},
+        {text: "Умные часы", name: "smartwatches"},
+        {text: "Портативная акустика", name: "acoustic"},
+        {text: "Сетевое оборудование", name: "networks"},
+        {text: "Офисная техника", name: "office"},
+        {text: "Умный дом", name: "smarthome"},
+        ]
+      })
+    </div>
+
+    @@include('search.html', {})
+
+    @@include('user-menu.html', {
+      "userItems": [
+      {text: "Анастасия", icon: "user", width: "24", height: "24"},
+      {text: "Покупки", icon: "bag", width: "21", height: "24"},
+      {text: "Избранное", icon: "favorites", width: "24", height: "24"},
+      {text: "Корзина", icon: "cart", width: "24", height: "24"},
+      {text: "Магазины", icon: "shop", width: "24", height: "24"},
+      {text: "г. Рязань", icon: "map-point", width: "18", height: "24"},
+      ]})
+  </div>
+
+  <div class="header__bottom container">
+      @@include('main-nav.html', {
+        "navigations": [
+        {"title": "Смартфоны"},
+        {"title": "Ноутбуки"},
+        {"title": "Телевизоры"},
+        {"title": "Видеотехника"},
+        {"title": "Планшеты"},
+        {"title": "Наушники"},
+        {"title": "Гейминг"},
+        {"title": "Умные часы"},
+        {"title": "Моноблоки"},
+        ],
+      })
+  </div>
+</header>

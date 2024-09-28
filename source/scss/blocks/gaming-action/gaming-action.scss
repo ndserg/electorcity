@@ -1,0 +1,192 @@
+.main-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 23px;
+
+  margin-bottom: 48px;
+
+  @media (min-width: $tablet) {
+    row-gap: 36px;
+
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 96px;
+  }
+}
+
+.main-actions__intro {
+  min-height: 169px;
+  padding-top: 41px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+
+  background-repeat: no-repeat;
+  background-position: right -6px top 38px, 0 0;
+  background-size: 146px 114px, cover;
+  border-radius: 10px;
+
+  @media (min-width: $tablet) {
+    padding-top: 100px;
+    padding-right: 49px;
+    padding-bottom: 121px;
+    padding-left: 49px;
+
+    background-position: right -5px top 94px, 0 0;
+    background-size: 325px 272px, cover;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 168px;
+    padding-right: 90px;
+    padding-bottom: 166px;
+    padding-left: 90px;
+
+    background-position: right 21px top 136px, 0 0;
+    background-size: 537px 440px, cover;
+    border-radius: 30px;
+    box-shadow: 0 6px 30px 4px rgba(32 32 32 / 10%);
+  }
+}
+
+.no-webp .main-actions__intro {
+  background-image: url("@img/sales/gaming.png"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+}
+
+.webp .main-actions__intro {
+  background-image: url("@img/sales/gaming.webp"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+}
+
+@media (min-width: $tablet) {
+  .no-webp .main-actions__intro {
+    background-image: url("@img/sales/gaming@2x.png"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+  }
+
+  .webp .main-actions__intro {
+    background-image: url("@img/sales/gaming@2x.webp"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+  }
+}
+
+@media (min-width: $desktop) {
+  .no-webp .main-actions__intro {
+    background-image: url("@img/sales/gaming@3x.png"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+  }
+
+  .webp .main-actions__intro {
+    background-image: url("@img/sales/gaming@3x.webp"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+  }
+}
+
+.main-actions__intro-info {
+  max-width: 140px;
+
+  @media (min-width: $tablet) {
+    max-width: 270px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 450px;
+  }
+}
+
+.main-actions__title {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: $white;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 18px;
+
+    font-size: 41px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 28px;
+
+    font-size: 67px;
+  }
+}
+
+.main-actions__intro-period {
+  margin: 0;
+
+  font-size: 8.5px;
+  font-weight: 400;
+  color: $white;
+
+  @media (min-width: $tablet) {
+    font-size: 20.5px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 35px;
+  }
+}
+
+.action__header {
+  margin-bottom: 23px;
+}
+
+.action__title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 18px;
+
+    font-size: 36px;
+  }
+}
+
+.action__period {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: #939393;
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+  }
+}
+
+.action__info {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 12px;
+
+  @media (min-width: $tablet) {
+    row-gap: 8px;
+
+    max-width: 718px;
+  }
+
+  @media (min-width: $desktop) {
+    row-gap: 11px;
+
+    max-width: 1078px;
+  }
+}
+
+.action__text {
+  margin: 0;
+
+  font-size: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
+}

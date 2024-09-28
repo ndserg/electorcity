@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    "title": "Электросити — интернет-магазин бытовой техники"})
+  <body>
+    @@include('html/header/header.html', {})
+
+    @@include('html/main.html', {"title": "Главная страница интернет-магазина бытовой техники Электросити"})
+
+    @@include('html/footer.html', {})
+
+    @@include('html/bottom-menu.html', {
+      "userItems": [
+      {text: "Главная", icon: "home", width: "20", height: "24"},
+      {text: "Поиск", icon: "search", width: "24", height: "24"},
+      {text: "Избранное", icon: "favorites", width: "24", height: "24"},
+      {text: "Корзина", icon: "cart", width: "24", height: "24"},
+      {text: "Профиль", icon: "user", width: "24", height: "24"},
+      ]})
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

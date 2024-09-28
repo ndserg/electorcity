@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    "title": "Страница акции"})
+  <body>
+    @@include('html/header/header.html', {})
+
+    <main class="main-actions container">
+      <section class="main-actions__intro">
+        <div class="main-actions__intro-info">
+          <h1 class="main-actions__title">Суперскидки на&nbsp;товары для&nbsp;гейминга</h1>
+
+          <p class="main-actions__intro-period">
+            с <time datetime="2024-10-08">8 октября</time>
+            до <time datetime="2024-10-26">26 октября</time>
+          </p>
+        </div>
+      </section>
+
+      <section class="main-actions__news">
+        <h2 class="visually-hidden">Акции</h2>
+
+        <article class="main-actions__article action">
+          <div class="action__header">
+            <h2 class="action__title">Скидки до 70% на товары для гейминга</h2>
+
+            <p class="action__period">
+              с <time datetime="2024-10-08">8 октября</time>
+              до <time datetime="2024-10-26">26 октября</time>
+            </p>
+          </div>
+
+          <div class="action__info">
+            <p class="action__text">
+              В&nbsp;период с&nbsp;8&nbsp;по&nbsp;26&nbsp;октября не&nbsp;пропустите скидки до&nbsp;70% товары для геймеров. Выбирайте товары&nbsp;из акционного списка и&nbsp;при оформлении заказа укажите промокод "GAMER" для&nbsp;активации скидки.
+            </p>
+
+            <p class="action__text">
+              Цены снижены на&nbsp;компьютеры, ноутбуки, ЖК&nbsp;мониторы, наушники, игровые кресла, геймпады, компьютерные мыши, клавиатуры, коврики для мыши.
+            </p>
+
+            <p class="action__text">
+              Купите товары для геймеров со&nbsp;скидкой до&nbsp;70%, гарантией и&nbsp;доставкой в&nbsp;интернет-магазине ЭЛЕКТРОСИТИ. Выгодные цены на&nbsp;товары для геймеров на&nbsp;electrocity.ru!
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    @@include('html/footer.html', {})
+
+    @@include('html/bottom-menu.html', {
+      "userItems": [
+      {text: "Главная", icon: "home", width: "20", height: "24"},
+      {text: "Поиск", icon: "search", width: "24", height: "24"},
+      {text: "Избранное", icon: "favorites", width: "24", height: "24"},
+      {text: "Корзина", icon: "cart", width: "24", height: "24"},
+      {text: "Профиль", icon: "user", width: "24", height: "24"},
+      ]})
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

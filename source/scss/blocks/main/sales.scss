@@ -1,0 +1,737 @@
+.sales__title {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: $black;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 36px;
+
+    font-size: 36px;
+  }
+}
+
+.sales__list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  @media (min-width: $mobile-xl) {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(169px, max-content);
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(200px, max-content);
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(203px, max-content);
+
+    gap: 34px;
+  }
+}
+
+.sales__item {
+  position: relative;
+
+  border-radius: 10px;
+
+  transition: transform 0.3s;
+
+  @media (min-width: $desktop) {
+    box-shadow: 0 6px 30px 4px rgba(32  32  32 / 10%);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.sales__card {
+  height: 100%;
+  min-height: 169px;
+  padding-top: 18px;
+  padding-right: 20px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+
+  border-radius: 10px;
+
+  @media (min-width: $tablet) {
+    min-height: unset;
+    padding-right: 23px;
+    padding-left: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+}
+
+.sales__logo {
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.sales__promo-text {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: $white;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 6px;
+
+    font-size: 21px;
+  }
+}
+
+.sales__card-link {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+
+  outline: none;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: "";
+
+    border-radius: 10px;
+    outline: 2px solid transparent;
+    outline-offset: 4px;
+
+    transition: outline 0.3s, opacity 0.3s;
+  }
+
+  &:focus-visible {
+    &::after {
+      outline-color: $red;
+    }
+  }
+
+  &:hover {
+    &::after {
+      outline-color: transparent;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: rgba(100 100 100 / 40%);
+    }
+  }
+}
+
+.sales__period {
+  margin: 0;
+
+  font-size: 8.5px;
+  color: $white;
+
+  @media (min-width: $tablet) {
+    font-size: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 11px;
+  }
+}
+
+.sales__gaming {
+  padding-top: 41px;
+  padding-bottom: 30px;
+
+  background-repeat: no-repeat;
+  background-position: right -6px top 38px, 0 0;
+  background-size: 146px 114px, cover;
+
+  .sales__info {
+    max-width: 140px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 48px;
+    padding-bottom: 30px;
+
+    background-position: right -4px top 41px, 0 0;
+    background-size: 168px 140px, cover;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 53px;
+
+    background-position: right 7px top 41px, 0 0;
+  }
+}
+
+.no-webp .sales__gaming {
+  background-image: url("@img/sales/gaming.png"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+}
+
+.webp .sales__gaming {
+  background-image: url("@img/sales/gaming.webp"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+}
+
+.sales__samsung {
+  padding-top: 35px;
+  padding-bottom: 30px;
+
+  background-color: $black;
+  background-repeat: no-repeat;
+  background-position: right 11px top 33px, right center;
+  background-size: 132px 96px, 161px 100%;
+
+  .sales__logo {
+    width: 56px;
+    height: 11px;
+    margin-bottom: 8px;
+  }
+
+  .sales__info {
+    max-width: 140px;
+  }
+
+  .sales__period {
+    font-size: 7.5px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 42px;
+    padding-bottom: 30px;
+
+    background-position: right 13px top 39px, right center;
+    background-size: 155px 115px, 189px 100%;
+
+    .sales__logo {
+      width: 68px;
+      height: 12px;
+    }
+
+    .sales__period {
+      font-size: 9px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 39px;
+
+    background-position: right 27px top 46px, right center;
+    background-size: 145px 107px, 189px 100%;
+
+    .sales__logo {
+      width: 71px;
+      height: 13px;
+    }
+
+    .sales__period {
+      font-size: 11px;
+    }
+  }
+}
+
+.no-webp .sales__samsung {
+  background-image: url("@img/sales/samsung-monitor.png"), url("@img/sales/samsung-bg.png");
+}
+
+.webp .sales__samsung {
+  background-image: url("@img/sales/samsung-monitor.webp"), url("@img/sales/samsung-bg.webp");
+}
+
+.sales__hp {
+  display: flex;
+
+  column-gap: 7px;
+
+  align-items: flex-start;
+
+  padding-top: 14px;
+
+  background-repeat: no-repeat;
+  background-position: left -6px bottom 10px, right -7px top 17px, center;
+  background-size: 169px 60px, 145px 142px, 100% 120%;
+
+  .sales__logo {
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+
+  .sales__info {
+    max-width: 160px;
+  }
+
+  .sales__promo-text {
+    font-size: 17.5px;
+  }
+
+  .sales__period {
+    font-size: 9.5px;
+  }
+
+  @media (min-width: $tablet) {
+    column-gap: 10px;
+
+    padding-top: 18px;
+
+    background-position: left -6px bottom 14px, right -8px top 22px, center;
+    background-size: 199px 68px, 173px 167px, 100% 120%;
+
+    .sales__logo {
+      width: 29px;
+      height: 29px;
+    }
+
+    .sales__promo-text {
+      font-size: 21px;
+    }
+
+    .sales__period {
+      font-size: 11px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    background-position: left -6px bottom 17px, right -8px top 22px, center;
+    background-size: 199px 68px, 173px 167px, 100% 120%;
+  }
+}
+
+.no-webp .sales__hp {
+  background-image: url("@img/sales/hp-keyboard.png"), url("@img/sales/hp-laptop.png"), linear-gradient(180deg, #01b9d5 51.36%, rgba(0 165 183 / 0%) 100%);
+}
+
+.webp .sales__hp {
+  background-image: url("@img/sales/hp-keyboard.webp"), url("@img/sales/hp-laptop.webp"), linear-gradient(180deg, #01b9d5 51.36%, rgba(0 165 183 / 0%) 100%);
+}
+
+.sales__philips {
+  padding-top: 41px;
+
+  background-repeat: no-repeat;
+  background-position: right 13px center , 0 0;
+  background-size: 144px 84px, cover;
+
+  .sales__logo {
+    width: 41px;
+    height: 15px;
+    margin-bottom: 8px;
+  }
+
+  .sales__info {
+    max-width: 150px;
+  }
+
+  .sales__promo-text {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 51px;
+
+    background-position: right 18px center , 0 0;
+    background-size: 169px 99px, cover;
+
+    .sales__logo {
+      width: 49px;
+      height: 16px;
+    }
+
+    .sales__promo-text {
+      margin-bottom: 6px;
+
+      font-size: 21px;
+    }
+
+    .sales__period {
+      font-size: 10px;
+    }
+  }
+}
+
+.no-webp .sales__philips {
+  background-image: url("@img/sales/philips-bg.png"), radial-gradient(53.22% 53.2% at 66.62% 50.25%, rgb(236 81 97) 0%, rgb(214 6 51) 0.6666%, rgb(18 18 18) 100%);
+}
+
+.webp .sales__philips {
+  background-image: url("@img/sales/philips-bg.webp"), radial-gradient(53.22% 53.2% at 66.62% 50.25%, rgb(236 81 97) 0%, rgb(214 6 51) 0.6666%, rgb(18 18 18) 100%);
+}
+
+.sales__bosh {
+  padding-top: 34px;
+
+  background-color: #e7ebec;
+  background-repeat: no-repeat;
+  background-position: right 14px top 21px;
+  background-size: 113px 140px;
+
+  .sales__logo {
+    width: 53px;
+    height: 14px;
+    margin-bottom: 8px;
+  }
+
+  .sales__info {
+    max-width: 150px;
+  }
+
+  .sales__promo-text,
+  .sales__period {
+    color: $black;
+  }
+
+  .sales__promo-text {
+    margin-bottom: 6px;
+
+    font-size: 17.5px;
+  }
+
+  .sales__period {
+    font-size: 9px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 41px;
+
+    background-position: right 17px top 26px;
+    background-size: 133px 165px;
+
+    .sales__logo {
+      width: 65px;
+      height: 16px;
+      margin-bottom: 10px;
+    }
+
+    .sales__promo-text {
+      margin-bottom: 6px;
+
+      font-size: 21px;
+    }
+
+    .sales__period {
+      font-size: 11px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    background-position: right 22px top 26px;
+    background-size: 133px 165px;
+  }
+}
+
+.no-webp .sales__bosh {
+  background-image: url("@img/sales/bosh-bg.png");
+}
+
+.webp .sales__bosh {
+  background-image: url("@img/sales/bosh-bg.webp");
+}
+
+.sales__iphone {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 13px;
+
+  align-items: center;
+
+  padding-top: 17px;
+  padding-right: 0;
+  padding-bottom: 17px;
+  padding-left: 0;
+
+  picture {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  picture:nth-child(1) img {
+    width: 100px;
+    height: 55px;
+  }
+
+  picture:nth-child(2) {
+    align-self: flex-end;
+
+    img {
+      width: 259px;
+      height: 58px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    row-gap: 16px;
+
+    padding-top: 21px;
+    padding-right: 0;
+    padding-bottom: 27px;
+    padding-left: 0;
+
+    picture:nth-child(1) img {
+      width: 122px;
+      height: 65px;
+    }
+
+    picture:nth-child(2) img {
+      width: 308px;
+      height: 69px;
+    }
+  }
+}
+
+.sales__review {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-top: 18px;
+
+  background-color: $red;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 82px 133px;
+
+  .sales__info {
+    max-width: 185px;
+  }
+
+  .sales__promo-text {
+    margin-bottom: 6px;
+
+    font-size: 16.5px;
+  }
+
+  .sales__period {
+    font-size: 9px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 12px;
+
+    background-size: 93px 159px;
+
+    .sales__promo-text {
+      font-size: 20px;
+    }
+
+    .sales__period {
+      font-size: 11px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 16px;
+  }
+}
+
+.no-webp .sales__review {
+  background-image: url("@img/sales/review-bg.png");
+}
+
+.webp .sales__review {
+  background-image: url("@img/sales/review-bg.webp");
+}
+
+.sales__bonus-card {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-top: 20px;
+
+  background-repeat: no-repeat;
+  background-position: right top calc(50% + 2px);
+  background-size: 148px 142px;
+  outline: 2px solid $red;
+
+  .sales__info {
+    max-width: 140px;
+  }
+
+  .sales__promo-text {
+    margin-bottom: 0;
+
+    font-size: 17px;
+    color: $red;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 16px;
+
+    background-size: 174px 174px;
+
+    .sales__promo-text {
+      font-size: 20px;
+    }
+  }
+}
+
+.no-webp .sales__bonus-card {
+  background-image: url("@img/sales/electrocity.png");
+}
+
+.webp .sales__bonus-card {
+  background-image: url("@img/sales/electrocity.webp");
+}
+
+.sales__super-sales {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 16px;
+  padding-left: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
+  background-size: cover;
+  border: 2px solid $red;
+
+  .sales__info {
+    max-width: 160px;
+
+    text-align: center;
+  }
+
+  .sales__promo-text {
+    margin-bottom: 4px;
+
+    font-size: 17px;
+    color: $red;
+  }
+
+  .sales__period {
+    font-size: 9px;
+    color: $black;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 12px;
+    padding-left: 26px;
+
+    .sales__promo-text {
+      margin-bottom: 6px;
+
+      font-size: 20px;
+    }
+
+    .sales__period {
+      font-size: 11px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 14px;
+    padding-left: 28px;
+  }
+}
+
+.no-webp .sales__super-sales {
+  background-image: url("@img/sales/super-sales-bg.png");
+}
+
+.webp .sales__super-sales {
+  background-image: url("@img/sales/super-sales-bg.webp");
+}
+
+@media (min-resolution: 2dppx) {
+  .no-webp .sales__gaming {
+    background-image: url("@img/sales/gaming@2x.png"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+  }
+
+  .webp .sales__gaming {
+    background-image: url("@img/sales/gaming@2x.webp"), linear-gradient(89deg, #d535e3 0%, #6f74e4 100%, #0052a4 100%);
+  }
+
+  .no-webp .sales__samsung {
+    background-image: url("@img/sales/samsung-monitor@2x.png"), url("@img/sales/samsung-bg@2x.png");
+  }
+
+  .webp .sales__samsung {
+    background-image: url("@img/sales/samsung-monitor@2x.webp"), url("@img/sales/samsung-bg@2x.webp");
+  }
+
+  .no-webp .sales__hp {
+    background-image: url("@img/sales/hp-keyboard@2x.png"), url("@img/sales/hp-laptop@2x.png"), linear-gradient(180deg, #01b9d5 51.36%, rgba(0 165 183 / 0%) 100%);
+  }
+
+  .webp .sales__hp {
+    background-image: url("@img/sales/hp-keyboard@2x.webp"), url("@img/sales/hp-laptop@2x.webp"), linear-gradient(180deg, #01b9d5 51.36%, rgba(0 165 183 / 0%) 100%);
+  }
+
+  .no-webp .sales__philips {
+    background-image: url("@img/sales/philips-bg@2x.png"), radial-gradient(53.22% 53.2% at 66.62% 50.25%, rgb(236 81 97) 0%, rgb(214 6 51) 0.6666%, rgb(18 18 18) 100%);
+  }
+
+  .webp .sales__philips {
+    background-image: url("@img/sales/philips-bg@2x.webp"), radial-gradient(53.22% 53.2% at 66.62% 50.25%, rgb(236 81 97) 0%, rgb(214 6 51) 0.6666%, rgb(18 18 18) 100%);
+  }
+
+  .no-webp .sales__bosh {
+    background-image: url("@img/sales/bosh-bg@2x.png");
+  }
+
+  .webp .sales__bosh {
+    background-image: url("@img/sales/bosh-bg@2x.webp");
+  }
+
+  .no-webp .sales__review {
+    background-image: url("@img/sales/review-bg@2x.png");
+  }
+
+  .webp .sales__review {
+    background-image: url("@img/sales/review-bg@2x.webp");
+  }
+
+  .no-webp .sales__bonus-card {
+    background-image: url("@img/sales/electrocity@2x.png");
+  }
+
+  .webp .sales__bonus-card {
+    background-image: url("@img/sales/electrocity@2x.webp");
+  }
+
+  .no-webp .sales__super-sales {
+    background-image: url("@img/sales/super-sales-bg@2x.png");
+  }
+
+  .webp .sales__super-sales {
+    background-image: url("@img/sales/super-sales-bg@2x.webp");
+  }
+}
+

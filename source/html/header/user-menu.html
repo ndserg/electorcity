@@ -1,0 +1,12 @@
+<ul class="header__user user-menu list-reset">@@for (var i = 0; i < userItems.length; i++) {
+  <li class="user-menu__item user-menu__item--`+userItems[i].icon+`">
+    <a class="user-menu__link" href="#">
+      <span class="user-menu__text">`+userItems[i].text+`</span>
+
+      <svg class="user-menu__icon user-menu__icon--`+userItems[i].icon+`" width="`+userItems[i].width+`" height="`+userItems[i].height+`" aria-hidden="true">
+        <use xlink:href="@img/icons/sprite.svg#icon-`+userItems[i].icon+`"></use>
+      </svg>
+    </a>
+  </li>
+}
+</ul>
